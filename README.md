@@ -1,3 +1,13 @@
+# memory model commands
+
+```
+lm_eval --model phi3memory --model_args model_path=/datadrive2/llm-memory/2024_9_1.2_simple/full_model.pth,base_model=/datadrive2/llm-memory/fromblob/Phi-3-mini-4k-instruct --tasks hellaswag,mmlu --apply_chat_template --batch_size 16 > memory_output_file.txt
+
+lm_eval --model phi3memory --model_args model_path=/datadrive2/llm-memory/2024_9_1.2_simple/full_model.pth,base_model=/datadrive2/llm-memory/fromblob/Phi-3-mini-4k-instruct --tasks openbookqa --apply_chat_template --batch_size 16 > memory_output_file.txt
+
+lm_eval --model hf --model_args pretrained=/datadrive2/llm-memory/fromblob/Phi-3-mini-4k-instruct --trust_remote_code --tasks hellaswag,mmlu --apply_chat_template --batch_size 16 > original_output_file.txt
+```
+
 # Language Model Evaluation Harness
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.10256836.svg)](https://doi.org/10.5281/zenodo.10256836)
